@@ -61,7 +61,7 @@ class Game extends React.Component {
       gameEnded: false
     })
     this.timer = setTimeout(() => this.startTiming()
-      , Math.floor(Math.random() * (6000 - 3000)) + 3000)
+      , Math.floor(Math.random() * (5000 - 2000)) + 2000)
   }
 
   startTiming() {
