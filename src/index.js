@@ -60,8 +60,9 @@ class Game extends React.Component {
     this.setState({
       gameEnded: false
     })
+    let delay = Math.floor(Math.random() * (this.props.maxTime - this.props.minTime)) + this.props.minTime;
     this.timer = setTimeout(() => this.startTiming()
-      , Math.floor(Math.random() * (5000 - 2000)) + 2000)
+      , delay)
   }
 
   startTiming() {
@@ -72,7 +73,7 @@ class Game extends React.Component {
   }
 
   endGame(isGreen) {
-    if(!isGreen) return;
+    if (!isGreen) return;
     this.setState({
       endTime: Date.now(),
       greenSquare: -1,
@@ -105,6 +106,9 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <Game
+    minTime={2000}
+    maxTime={5000}
+  />,
   document.getElementById('root')
 );
