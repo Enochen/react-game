@@ -69,7 +69,6 @@ class Game extends React.Component {
       startTime: Date.now(),
       greenSquare: Math.floor(Math.random() * (9))
     })
-    console.log('hi');
   }
 
   endGame(isGreen) {
