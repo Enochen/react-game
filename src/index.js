@@ -104,8 +104,8 @@ class Game extends React.Component {
 }
 
 // ========================================
-const minTime = 2000;
-const maxTime = 5000;
+const minTime = 3000;
+const maxTime = 6000;
 
 ReactDOM.render(
   <Game
