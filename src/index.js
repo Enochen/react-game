@@ -104,11 +104,13 @@ class Game extends React.Component {
 }
 
 // ========================================
+const minTime = 2000;
+const maxTime = 5000;
 
 ReactDOM.render(
   <Game
-    minTime={2000}
-    maxTime={5000}
+    minTime={minTime}
+    maxTime={maxTime}
   />,
   document.getElementById('root')
 );
